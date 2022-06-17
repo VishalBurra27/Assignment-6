@@ -1,0 +1,65 @@
+\documentclass{beamer}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{AI1110\\Assignment 6 } 
+\author{Burra Vishal Mathews \\ CS21BTECH11010}
+
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\logo{}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+\begin{frame}{Question}
+\section{Question}
+\begin{block}
+
+Show that if $s\sbrak{n}$ is AR and $v\sbrak{n}$ is white noise orthogonal to $s\sbrak{n}$, then the process $x\sbrak{n} = s\cbrak{n} + v\cbrak{n}$ is ARMA. Find $S_x(z)$ if $R_S\cbrak{m} = 2^{-\lvert x \rvert}$ and $S_{\nu}(z) = 5$.
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+\section{Solution}
+\begin{align*}
+    s_X(z)=s_S(z)+s_{\nu}(z)=\frac{1}{D(z)}+q = \frac{1+qD(z)}{D(z)}
+\end{align*}
+
+According to the question ;
+     $R_S\sbrak{m}=2^{- \lvert m \rvert}$ and $S_{\nu}(z)=5$.\\
+
+    $$ s_S(Z)=\brak{\frac{1.5}{2.5-z^{-1}-z}}$$
+
+    $$s_x(z)=\brak{5+\frac{1.5}{2.5-z^{-1}-z}}$$
+
+    $$s_x(z)=\brak{\frac{5-14.5z^{-1}+5z^{-2}}{1-2.5z^{-1}+z^{-2}}}$$
+    
+\end{frame}
+
+\end{document}
